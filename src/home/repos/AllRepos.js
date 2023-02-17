@@ -50,7 +50,7 @@ function AllRepos({orgName}) {
     return (
 
         <div>
-            {checking() ? <ReposListed repos={repos} orgName = {orgName} /> : <LoadingHandler error={repoError} orgName={orgName} />}
+            {checking() ? <ReposListed repos={repos} orgName = {orgName} /> : <LoadingHandler repoError={repoError} orgName={orgName} />}
         </div>
 
     )

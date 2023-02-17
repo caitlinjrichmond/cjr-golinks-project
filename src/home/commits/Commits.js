@@ -22,6 +22,7 @@ function Commits({repo, orgName}) {
    useEffect(() => {
        setCommits([]);
        setLoading(false);
+       setCommitError(null)
        const abortController = new AbortController();
 
        async function loadCommits() {
@@ -34,6 +35,7 @@ function Commits({repo, orgName}) {
             if (error.name === "AbortError") {
                 console.log("Aborted")
             } else {
+                setCommitError(error)
                 throw error;
             }
         }
@@ -55,7 +57,7 @@ function Commits({repo, orgName}) {
 
     return(
         <div>
-       { checking() ? <CommitsList commits={commits} /> : <LoadingHandler />}
+       { checking() ? <CommitsList commits={commits} /> : <LoadingHandler commitError={commitError} orgName={orgName} />}
         </div>
     )
 }
