@@ -1,11 +1,11 @@
 import React from "react";
-import { useState } from "react";
+import "./Main.css"
 
 function SearchBar({handleChange, handleSubmit, orgName}) {
 
 //need to add handle submit
     return (
-        <>
+        <div id="search-bar">
         <form onSubmit={handleSubmit}>
           <label htmlFor="orgName">
             <span>Search for An Org's Repos:</span>
@@ -25,7 +25,7 @@ function SearchBar({handleChange, handleSubmit, orgName}) {
             <span>Find</span>
           </button>
         </form>
-      </>
+      </div>
     )
 }
 

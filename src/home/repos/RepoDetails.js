@@ -2,6 +2,11 @@ import React from "react";
 
 function RepoDetails({ repo }) {
 
+    function formatDate(date) {
+        return new Date(date).toLocaleDateString()
+    }
+
+    console.log(formatDate(repo.created_at))
     return (
         <>
             <div className="card-body">
@@ -15,7 +20,7 @@ function RepoDetails({ repo }) {
                     <br />
                     Fork Count: {repo.forks_count}
                     <br />
-                    Date Created: {repo.created_at}</p>
+                    Date Created: {formatDate(repo.created_at)}</p>
 
             </div>
         </>

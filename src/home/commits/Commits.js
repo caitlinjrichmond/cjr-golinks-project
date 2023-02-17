@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import axios from "axios"
 import CommitsList from "./CommitsList";
 import LoadingHandler from "../LoadingHandler";
+import "./Commits.css"
 
 // WHEN YOU GO TO DO THE INDIVUDAL LIST YOU MUST HARDCODE THE URL TO DO THE GET REQUST FROM,
 

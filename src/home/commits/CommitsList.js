@@ -1,12 +1,14 @@
 import React from "react"
 import CommitDetails from "./CommitDetails"
+import "./Commits.css"
 
 function CommitsList({ commits }) {
 
     return (
         <div>
             {" "}
-            <h4>All Commits</h4>
+            <div id="scrollbox-c">
+                <center><h4>All Commits</h4></center>
             <ul>
                 {commits.map((commit) =>
                     <li key={commit.sha} style={{ listStyleType: "none" }}>
@@ -14,6 +16,7 @@ function CommitsList({ commits }) {
                     </li>
                 )}
             </ul>
+            </div>
         </div>
     )
 }

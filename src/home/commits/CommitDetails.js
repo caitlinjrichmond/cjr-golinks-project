@@ -2,7 +2,9 @@ import React from "react";
 
 function CommitDetails({username, hash, created, backup, message}) {
 
-    console.log(message)
+    function formatDate(date) {
+        return new Date(date).toLocaleDateString()
+    }
   
     return (
         <>
@@ -14,7 +16,7 @@ function CommitDetails({username, hash, created, backup, message}) {
                     <br />
                     Hash: {hash}
                     <br />
-                    Date Created: {created}
+                    Date Created: {formatDate(created)}
                     </p>
 
             </div>

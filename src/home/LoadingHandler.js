@@ -19,7 +19,7 @@ function LoadingHandler({repoError, commitError, orgName}) {
 
     return (
         <>
-       { noErrors() ? <div className="spinner-border text-info" role="status">
+       { noErrors() ? <div id="loader" className="spinner-border text-info" role="status">
         <span className="visually-hidden">Loading...</span>
     </div> : <p> {message()} </p>}
     </>

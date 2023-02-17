@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import AllRepos from "./repos/AllRepos";
 import SearchBar from "./SearchBar";
+import "./Main.css"
 
 function MainDisplay() {
     const [orgName, setOrgName] = useState("")
@@ -36,8 +37,8 @@ function MainDisplay() {
 
     return (
         <div>
-            <h1>This Will Be The Main Page</h1>
             <SearchBar handleChange={handleChange} handleSubmit={handleSubmit} orgName={orgName}/>
+           <br />
             <AllRepos orgName = {determineListing()} />
         </div>
     )

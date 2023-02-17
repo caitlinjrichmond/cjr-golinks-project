@@ -1,0 +1,7 @@
+#scrollbox-c {
+    overflow: scroll;
+    width: 600px;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}

@@ -3,6 +3,7 @@ import { useState } from "react"
 import axios from 'axios'
 import ReposListed from "./ReposListed"
 import LoadingHandler from "../LoadingHandler"
+import "./Repos.css"
 
 function AllRepos({orgName}) {
     const [repos, setRepos] = useState([])
