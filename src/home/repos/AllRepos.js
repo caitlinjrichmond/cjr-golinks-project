@@ -2,15 +2,17 @@ import React, { useEffect } from "react"
 import { useState } from "react"
 import axios from 'axios'
 import ReposListed from "./ReposListed"
+import LoadingHandler from "../LoadingHandler"
 
-function AllRepos() {
+function AllRepos({orgName}) {
     const [repos, setRepos] = useState([])
     const [repoError, setRepoError] = useState(null)
     const [loading, setLoading] = useState(false)
-    const url = "https://api.github.com/orgs/Netflix/repos"
+    const url = `https://api.github.com/orgs/${orgName}/repos`
 
     useEffect(() => {
         setRepos([]);
+        setRepoError(null)
         setLoading(false);
         const abortController = new AbortController();
 
@@ -23,9 +25,11 @@ function AllRepos() {
             } catch (error) {
                 if (error.name === "AbortError") {
                     console.log("Aborted")
-                } else {
-                    throw error;
+                } else {  
+                    setRepoError(error.message)
+                    throw error
                 }
+              
             }
         }
 
@@ -35,16 +39,18 @@ function AllRepos() {
             console.log("clean up");
             abortController.abort()
         }
-    }, [])
+    }, [orgName])
 
     function checking() {
         return loading && repos.length != 0;
     }
 
+    console.log(repoError)
+    
     return (
 
         <div>
-            {checking() ? <ReposListed repos={repos} /> : <p>Loading...</p>}
+            {checking() ? <ReposListed repos={repos} orgName = {orgName} /> : <LoadingHandler error={repoError} orgName={orgName} />}
         </div>
 
     )

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios"
 import CommitsList from "./CommitsList";
+import LoadingHandler from "../LoadingHandler";
 
 // WHEN YOU GO TO DO THE INDIVUDAL LIST YOU MUST HARDCODE THE URL TO DO THE GET REQUST FROM,
 
@@ -11,11 +12,11 @@ import CommitsList from "./CommitsList";
 // or splice the full url and take out the last 6 char --> seee if you get the correct string after
 // repo.commit_url.substring(0, repo.commit_url.length - 6)
 
-function Commits({repo}) {
+function Commits({repo, orgName}) {
     const [commits, setCommits] = useState([]);
     const [commitError, setCommitError] = useState(null)
     const [loading, setLoading] = useState(false)
-    const url = `https://api.github.com/repos/Netflix/${repo.name}/commits`
+    const url = `https://api.github.com/repos/${orgName}/${repo.name}/commits`
 
     console.log(repo.name)
    useEffect(() => {
@@ -44,7 +45,7 @@ function Commits({repo}) {
            console.log("clean up");
            abortController.abort()
        }
-   }, [])
+   }, [orgName])
     
    console.log(commits)
 
@@ -54,7 +55,7 @@ function Commits({repo}) {
 
     return(
         <div>
-       { checking() ? <CommitsList commits={commits} /> : <p>Loading...</p>}
+       { checking() ? <CommitsList commits={commits} /> : <LoadingHandler />}
         </div>
     )
 }
