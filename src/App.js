@@ -1,5 +1,5 @@
 import React from "react";
-import MainDisplay from "./MainDisplay";
+import MainDisplay from "./home/MainDisplay";
 
 function App() {
   return (

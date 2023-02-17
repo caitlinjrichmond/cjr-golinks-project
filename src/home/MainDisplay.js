@@ -1,5 +1,5 @@
 import React from "react";
-import AllRepos from "./AllRepos";
+import AllRepos from "./repos/AllRepos";
 
 function MainDisplay() {
 

@@ -6,7 +6,7 @@ import ReposListed from "./ReposListed"
 function AllRepos() {
     const [repos, setRepos] = useState([])
     const [repoError, setRepoError] = useState(null)
-    const [loading, setLoading] = useState(false) 
+    const [loading, setLoading] = useState(false)
     const url = "https://api.github.com/orgs/Netflix/repos"
 
     useEffect(() => {
@@ -37,11 +37,15 @@ function AllRepos() {
         }
     }, [])
 
-   
-
+    function checking() {
+        return loading && repos.length != 0;
+    }
 
     return (
-        <div><ReposListed repos = {repos} /></div>
+
+        <div>
+            {checking() ? <ReposListed repos={repos} /> : <p>Loading...</p>}
+        </div>
 
     )
 }

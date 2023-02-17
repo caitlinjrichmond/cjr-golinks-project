@@ -1,5 +1,5 @@
 import React from "react";
-import IndividualRepo from "./IndividualRepo";
+import RepoDisplay from "./RepoDisplay";
 
 
 function ReposListed({repos}) {
@@ -14,11 +14,13 @@ function ReposListed({repos}) {
     return(
         <div>
         {" "}
+        <ul>
         {sortedRepos.map((repo) => 
             <li key = {repo.id} style = {{ listStyleType: "none"}}>
-                <IndividualRepo repo = {repo} />
+                <RepoDisplay repo = {repo} />
             </li>
         )}
+        </ul>
     </div>
     )
 }
