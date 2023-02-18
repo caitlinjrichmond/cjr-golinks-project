@@ -6,21 +6,30 @@ function RepoDetails({ repo }) {
         return new Date(date).toLocaleDateString()
     }
 
-    console.log(formatDate(repo.created_at))
+    function formatDesc(desc) {
+        let endingPunc = [".", "!", "?"]
+        let lastChar = desc[desc.length -1]
+        if (!endingPunc.includes(lastChar)) {
+            desc = desc + "."
+        }
+
+        return desc
+    }
+
     return (
         <>
             <div className="card-body">
-                <h5 className="card-title">  Repo Name: {repo.name}</h5>
-                <p className="card-text">        <br />
-                    Language: {repo.language}
-                    <br />
-                    Description: {repo.description}
-                    <br />
-                    Star Count: {repo.stargazers_count}
-                    <br />
-                    Fork Count: {repo.forks_count}
-                    <br />
-                    Date Created: {formatDate(repo.created_at)}</p>
+
+                <p className="card-text">
+                    {repo.description? formatDesc(repo.description) : "Click to see commits."}
+                 
+                    <div className="d-flex justify-content-between repo-details">
+                       { repo.language ? <span id="language"> {repo.language} </span> : <span> {" "} </span>}
+                        <div>
+                            Created: {formatDate(repo.created_at)}
+                        </div>
+                    </div>
+                </p>
 
             </div>
         </>

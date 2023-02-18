@@ -46,7 +46,6 @@ function AllRepos({orgName}) {
         return loading && repos.length != 0;
     }
 
-    console.log(repoError)
     
     return (
 

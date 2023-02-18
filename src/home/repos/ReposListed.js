@@ -16,17 +16,20 @@ function ReposListed({ repos, orgName }) {
     return (
         <div>
             {" "}
-            <h6 className="repo-showing">Currently Showing Repos for {orgName}</h6>
-       
-            <div id="scrollbox-r">
+            <h6 className="repo-showing">Showing {repos.length} Repos for "{orgName}"</h6>
+            <br />
+    
+            <div id="full-repo-list">
                 <ul >
                     {sortedRepos.map((repo) =>
                         <li key={repo.id} style={{ listStyleType: "none" }}>
                             <RepoDisplay repo={repo} orgName={orgName} />
+                            <br />
                         </li>
                     )}
                 </ul>
             </div>
+
         </div>
     )
 }

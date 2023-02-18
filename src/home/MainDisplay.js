@@ -6,40 +6,28 @@ import "./Main.css"
 
 function MainDisplay() {
     const [orgName, setOrgName] = useState("")
+    const [data, setData] = useState("")
     const [submitStatus, setSubmitStatus] = useState(false)
     const defaultOrgName = "Netflix"
 
     const handleChange = (event) => {
         event.preventDefault()
-
-        setOrgName(event.target.value)
         setSubmitStatus(false)
+        setData(event.target.value)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        setOrgName(data)
         setSubmitStatus(true)
     }
-
-    function determineListing() {
-        if (orgName && submitStatus) {
-            return orgName
-        } else {
-            return defaultOrgName
-        }
-    }
-
-    console.log(determineListing())
-
-
-
 
 
     return (
         <div>
-            <SearchBar handleChange={handleChange} handleSubmit={handleSubmit} orgName={orgName}/>
-           <br />
-            <AllRepos orgName = {determineListing()} />
+            <SearchBar handleChange={handleChange} handleSubmit={handleSubmit} orgName={orgName} data={data} />
+            <br />
+            {orgName ? <AllRepos orgName={orgName} /> : <AllRepos orgName={defaultOrgName} />}
         </div>
     )
 }
