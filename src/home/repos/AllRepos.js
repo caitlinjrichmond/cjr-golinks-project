@@ -5,7 +5,7 @@ import ReposListed from "./ReposListed"
 import LoadingHandler from "../LoadingHandler"
 import "./Repos.css"
 
-function AllRepos({orgName}) {
+function AllRepos({orgName, darkMode, background}) {
     const [repos, setRepos] = useState([])
     const [repoError, setRepoError] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -49,8 +49,9 @@ function AllRepos({orgName}) {
     
     return (
 
-        <div>
-            {checking() ? <ReposListed repos={repos} orgName = {orgName} /> : <LoadingHandler repoError={repoError} orgName={orgName} />}
+        // <div style={{backgroundColor: background, height:"100vh"}}>
+        <div style={{backgroundColor: background, height:"100vh"}}>    
+        {checking() ? <ReposListed background={background} darkMode={darkMode} repos={repos} orgName = {orgName} /> : <LoadingHandler background={background} darkMode={darkMode} repoError={repoError} orgName={orgName} />}
         </div>
 
     )

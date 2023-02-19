@@ -13,7 +13,7 @@ import "./Commits.css"
 // or splice the full url and take out the last 6 char --> seee if you get the correct string after
 // repo.commit_url.substring(0, repo.commit_url.length - 6)
 
-function Commits({repo, orgName}) {
+function Commits({darkMode, repo, orgName}) {
     const [commits, setCommits] = useState([]);
     const [commitError, setCommitError] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -58,7 +58,7 @@ function Commits({repo, orgName}) {
 
     return(
         <div>
-       { checking() ? <CommitsList commits={commits} /> : <LoadingHandler commitError={commitError} orgName={orgName} />}
+       { checking() ? <CommitsList darkMode={darkMode} commits={commits} /> : <LoadingHandler commitError={commitError} orgName={orgName} />}
         </div>
     )
 }

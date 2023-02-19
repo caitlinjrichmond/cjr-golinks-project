@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function LoadingHandler({repoError, commitError, orgName}) {
+function LoadingHandler({ darkMode, background, repoError, commitError, orgName }) {
 
     function noErrors() {
         return !repoError && !commitError
@@ -18,11 +18,11 @@ function LoadingHandler({repoError, commitError, orgName}) {
     }
 
     return (
-        <>
-       { noErrors() ? <div id="loader" className="spinner-border text-info" role="status">
-        <span className="visually-hidden">Loading...</span>
-    </div> : <p> {message()} </p>}
-    </>
+        <div className="loading-or-errors" style={{ backgroundColor: background, height: "100vh" }}>
+            {noErrors() ? <div id="loader" className="spinner-border" style={{ color: "#C792E4" }} role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div> : <p> {message()} </p>}
+        </div>
     )
 }
 
