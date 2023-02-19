@@ -43,7 +43,7 @@ function CommitDetails({ darkMode, username, hash, created, backup, message }) {
                     <p className="description" style={{fontSize: "14px"}}> {message}</p>
                 
          
-                    <center><p className="hash-text" style={{color: "#000", backgroundColor: "#C792E4"}}>{hash}</p></center>
+                    <center><span className="hash-text" style={{color: "#000", backgroundColor: "#C792E4"}}>{hash}</span></center>
                 </div>
             </div>
         </>

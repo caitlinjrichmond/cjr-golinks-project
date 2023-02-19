@@ -40,7 +40,7 @@ function AllRepos({orgName, darkMode, background}) {
             console.log("clean up");
             abortController.abort()
         }
-    }, [orgName])
+    }, [url])
 
     function checking() {
         return loading && repos.length != 0;
@@ -50,7 +50,7 @@ function AllRepos({orgName, darkMode, background}) {
     return (
 
         // <div style={{backgroundColor: background, height:"100vh"}}>
-        <div style={{backgroundColor: background, height:"100vh"}}>    
+        <div style={{backgroundColor: background}}>    
         {checking() ? <ReposListed background={background} darkMode={darkMode} repos={repos} orgName = {orgName} /> : <LoadingHandler background={background} darkMode={darkMode} repoError={repoError} orgName={orgName} />}
         </div>
 
