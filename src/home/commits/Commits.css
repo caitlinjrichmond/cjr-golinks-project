@@ -9,7 +9,7 @@
   
 }
 
-.card-text {
+.commit-text {
     border-radius: 10px;
     border: none;
     font-size: 14px;
@@ -41,4 +41,39 @@
 
 .bi-person-circle {
     margin-bottom: 3px;
+}
+
+@media screen and (max-width: 479px) {
+    .hash-text {
+        font-size: 8px;
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .commit-text {
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .commit-list {
+        padding-right: 3%;
+        padding-left: 5%;
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .description {
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .bi-person-circle {
+        font-size: 8px;
+    }
 }

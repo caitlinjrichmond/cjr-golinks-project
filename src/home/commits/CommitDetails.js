@@ -16,7 +16,7 @@ function CommitDetails({ username, hash, created, backup, message }) {
             <div className="card commit-card">
                 <div className="card-body">
                     <div className="d-flex justify-content-between">
-                        <p className="card-text" style={{ color: "#000", backgroundColor: "#FFBE0B" }}>
+                        <p className="card-text commit-text" style={{ color: "#000", backgroundColor: "#FFBE0B" }}>
                             <svg xmlns="http://www.w3.org/2000/svg"
                                 width="16"
                                 height="16"
@@ -30,7 +30,7 @@ function CommitDetails({ username, hash, created, backup, message }) {
                             </svg> 
                             {" "} {username.login ? username.login : backup.name}
                         </p>
-                        <p className="card-text" style={{ color: "#000", backgroundColor: "#00D0FF" }}>Created: {formatDate(created)}</p>
+                        <p className="card-text commit-text" style={{ color: "#000", backgroundColor: "#00D0FF" }}>Created: {formatDate(created)}</p>
                     </div>
                     <br />
                     <p className="description" style={{ fontSize: "14px" }}> {message}</p>
