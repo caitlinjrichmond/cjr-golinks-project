@@ -5,10 +5,10 @@
 
 ## About the Project
 
-![Screenshot 1] (/screenshots/screen1.jpeg)
+![Screenshot 1] ("/screenshots/screen1.jpeg")
 Display of Repo List
 
-![Screenshot 2] (/screenshots/screen2.jpeg)
+![Screenshot 2] ("/screenshots/screen2.jpeg")
 Display of Commits
 
 This project is a web page that allows for a user to input a company or organization name, recieve a list of that org's GitHub repositories, and allows the user to see a list of commits for each repository. 
