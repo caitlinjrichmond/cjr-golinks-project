@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import RepoDetails from "./RepoDetails";
 import Commits from "../commits/Commits"
+import "./Repos.css"
 
 
 function RepoDisplay({ darkMode, repo, orgName }) {
@@ -17,8 +18,8 @@ function RepoDisplay({ darkMode, repo, orgName }) {
     }
 
     return (
-        <div className="card shadow bg-body-tertiary rounded" onClick={handleClick}>
-            {!clicked ? <RepoDetails handleClick={handleClick} darkMode={darkMode} repo={repo} /> : <Commits darkMode={darkMode} repo={repo} orgName={orgName} />}
+        <div className="card shadow bg-body-tertiary rounded">
+            {!clicked ? <RepoDetails handleClick={handleClick} darkMode={darkMode} repo={repo} /> : <Commits handleClick={handleClick} darkMode={darkMode} repo={repo} orgName={orgName} />}
         </div>
 
 

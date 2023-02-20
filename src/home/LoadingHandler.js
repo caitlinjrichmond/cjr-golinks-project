@@ -1,4 +1,5 @@
 import React from "react";
+import "./Main.css"
 
 
 function LoadingHandler({ darkMode, background, repoError, commitError, orgName }) {

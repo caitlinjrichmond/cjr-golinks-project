@@ -1,4 +1,5 @@
 import React from "react";
+import "./Repos.css"
 
 function RepoDetails({ handleClick, repo }) {
 
@@ -47,19 +48,19 @@ function RepoDetails({ handleClick, repo }) {
                         {repo.forks_count}
                     </p>
                     {" "}
-                    <p className="lang" style={{ backgroundColor: "#C792E4", color: "#000" }}>{repo.language ? repo.language : null}</p>
+                    <p className="lang" style={{ backgroundColor: "#C792E4", color: "#000" }}>{repo.language ? repo.language : "Other"}</p>
                     {" "}
                 </div>
                 <div className="d-flex flex-row">
                     <p>{repo.description ? formatDesc(repo.description) : "See commits for details."}</p>
                 </div>
                 <div className="d-flex flex-row justify-content-center">
-                    <p onClick={handleClick}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                        </svg> {" "}
-                        See Commits
+                    <p className="see-commits" onClick={handleClick}>
+                        See Commits {" "} 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                            <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
                     </p>
                 </div>
             </div>

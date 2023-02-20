@@ -53,4 +53,9 @@ ul {
     padding-right: 50px;
     padding-top: 10px;
     padding-bottom: 20px;
+    min-width: 100%;
+}
+
+.see-commits {
+    cursor: pointer;
 }

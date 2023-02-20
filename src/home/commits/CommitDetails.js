@@ -1,4 +1,5 @@
 import React from "react";
+import "./Commits.css"
 
 function CommitDetails({ darkMode, username, hash, created, backup, message }) {
 
@@ -28,7 +29,7 @@ function CommitDetails({ darkMode, username, hash, created, backup, message }) {
     // title: {message} hash {hash}
     return (
         <>
-            <div className="card" id="commit-card">
+            <div className="card commit-card">
                 <div className="card-body">
                     <div className="d-flex justify-content-between">
                         <p className="card-text" style={{ color: "#000", backgroundColor: "#FFBE0B" }}>
@@ -43,7 +44,7 @@ function CommitDetails({ darkMode, username, hash, created, backup, message }) {
                     <p className="description" style={{fontSize: "14px"}}> {message}</p>
                 
          
-                    <center><span className="hash-text" style={{color: "#000", backgroundColor: "#C792E4"}}>{hash}</span></center>
+                    <span className="hash-text" style={{color: "#000", backgroundColor: "#C792E4"}}>{hash}</span>
                 </div>
             </div>
         </>
