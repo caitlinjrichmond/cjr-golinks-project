@@ -55,14 +55,12 @@
     }
 }
 
-
 @media screen and (max-width: 479px) {
     .commit-list {
         padding-right: 5%;
         padding-left: 3%;
     }
 }
-
 
 @media screen and (max-width: 479px) {
     .description {
@@ -74,5 +72,6 @@
     .bi-person-circle {
         width: 12px;
         height: 12px;
+        margin-bottom: 2px;
     }
 }
