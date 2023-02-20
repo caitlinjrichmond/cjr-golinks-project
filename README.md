@@ -1,22 +1,29 @@
-<<<<<<< HEAD
+
 # Go/links Take Home Project - Caitlin Richmond
 
 <!-- ABOUT THE PROJECT -->
 
 ## About the Project
 
+
 ![Screenshot 1] ("/screenshots/screen1.jpeg")
 Display of Repo List
 
 ![Screenshot 2] ("/screenshots/screen2.jpeg")
+=======
+![Screenshot 1] (screenshots/screen1.jpeg)
+Display of Repo List
+
+![Screenshot 2] (screenshots/screen2.jpeg)
+>>>>>>> 09e18d09954a61899a5104549d0dc3b3e2d32e80
 Display of Commits
 
 This project is a web page that allows for a user to input a company or organization name, recieve a list of that org's GitHub repositories, and allows the user to see a list of commits for each repository. 
 
 ### Built With
 
-* [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* React.js
+* Bootstrap for styling
 
 ### Features
 
