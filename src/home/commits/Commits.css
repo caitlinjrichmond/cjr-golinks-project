@@ -59,8 +59,8 @@
 
 @media screen and (max-width: 479px) {
     .commit-list {
-        padding-right: 3%;
-        padding-left: 5%;
+        padding-right: 5%;
+        padding-left: 3%;
     }
 }
 
