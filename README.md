@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Go/links Take Home Project - Caitlin Richmond
 
 <!-- ABOUT THE PROJECT -->
