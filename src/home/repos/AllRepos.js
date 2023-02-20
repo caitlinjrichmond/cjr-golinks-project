@@ -58,7 +58,7 @@ function AllRepos({ orgName, darkMode, background }) {
         <div style={{ backgroundColor: background }}>
             {checking() ?
                 <ReposListed background={background} darkMode={darkMode} repos={repos} orgName={orgName} /> :
-                <Handlers background={background} repoError={repoError} orgName={orgName} />}
+                <Handlers darkMode={darkMode} background={background} repoError={repoError} orgName={orgName} />}
         </div>
 
     )

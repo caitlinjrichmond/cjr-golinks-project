@@ -7,7 +7,7 @@ import "../Main.css"
 // if there are errors, the error handler is rendered.
 // if the data is simply loading, a spinner is shown 
 
-function Handlers({ background, repoError, commitError, orgName }) {
+function Handlers({ darkMode, background, repoError, commitError, orgName }) {
 
     // function checks if an error occured during a GET request for repos and/or commits
     function noErrors() {
@@ -27,7 +27,7 @@ function Handlers({ background, repoError, commitError, orgName }) {
 
     return (
         <div className="handlers" style={{ backgroundColor: background, height: "100vh" }}>
-            {noErrors() ? <LoadingHandler /> : <ErrorHandler message={message()} />}
+            {noErrors() ? <LoadingHandler /> : <ErrorHandler darkMode={darkMode} message={message()} />}
         </div>
     );
 };
