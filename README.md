@@ -6,10 +6,10 @@
 ## About the Project
 
 
-![Screenshot 1] (/screenshots/screen1.jpeg)
+[Screenshot 1] (/screenshots/screen1.jpeg)
 Display of Repo List
 
-![Screenshot 2] (/screenshots/screen2.jpeg)
+[Screenshot 2] (/screenshots/screen2.jpeg)
 Display of Commit List
 
 
