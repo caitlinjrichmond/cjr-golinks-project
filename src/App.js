@@ -1,8 +1,6 @@
 import React from "react";
 import MainDisplay from "./home/MainDisplay";
 
-
-
 function App() {
 
   return (
@@ -10,6 +8,7 @@ function App() {
     <MainDisplay />
     </div>
   );
+  
 }
 
 export default App;

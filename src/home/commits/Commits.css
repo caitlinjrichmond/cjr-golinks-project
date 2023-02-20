@@ -1,5 +1,6 @@
+/* Styling for the list of commits and individual commit cards */
+
 .scrollbox-c {
-    /* overflow: scroll; */
     width: auto;
     height: auto;
     margin-right: auto;
@@ -7,7 +8,6 @@
     padding-left: 5px;
   
 }
-
 
 .card-text {
     border-radius: 10px;
@@ -20,7 +20,7 @@
 .hash-text {
     border-radius: 10px;
     border: none;
-    font-size: 12px;
+    font-size: 11px;
     margin: 0;
     padding: 4px;
     
@@ -32,4 +32,13 @@
 
 .back-to-repo {
     cursor: pointer;
+}
+
+.bi-chevron-double-left {
+    margin-bottom: 3px;
+    margin-left: 10px;
+}
+
+.bi-person-circle {
+    margin-bottom: 3px;
 }

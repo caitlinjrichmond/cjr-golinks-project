@@ -1,61 +1,62 @@
+/* Styling for repo lists and individual repo cards */
 
 .repo-showing {
-    justify-content: flex-start;
-    padding-left: 45px;
+	justify-content: flex-start;
+	padding-left: 45px;
 }
 
 .counts {
-    border-radius: 10px;
-    border: none;
-    font-size: 12px;
-    padding: 4px;
-    margin-left: 7px;
+	border-radius: 10px;
+	border: none;
+	font-size: 12px;
+	padding: 4px;
+	margin-left: 7px;
 }
 
 .stars {
-    margin-left: 0
+	margin-left: 0;
 }
 
 .repo-name {
-    align-self: center;
-    margin-bottom: auto;
-    margin-top: auto;
+	align-self: center;
+	margin-bottom: auto;
+	margin-top: auto;
 }
 
 .lang {
-    border-radius: 10px;
-    border: none;
-    font-size: 12px;
-    padding: 4px;
-    margin-left: 7px;
+	border-radius: 10px;
+	border: none;
+	font-size: 12px;
+	padding: 4px;
+	margin-left: 7px;
 }
 
 .card-text {
-    font-size: 14px;
-    margin-bottom: 0;
-    margin-top: auto;
+	font-size: 14px;
+	margin-bottom: 0;
+	margin-top: auto;
 }
 
 .repo-details {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
 .bi-star {
-    margin-bottom: 3px;
+	margin-bottom: 3px;
 }
 
 .bi-bezier2 {
-    margin-bottom: 2px;
+	margin-bottom: 2px;
 }
- 
+
 ul {
-    padding-left: 45px;
-    padding-right: 50px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    min-width: 100%;
+	padding-left: 45px;
+	padding-right: 50px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	min-width: 100%;
 }
 
 .see-commits {
-    cursor: pointer;
+	cursor: pointer;
 }
